@@ -1,0 +1,19 @@
+{
+  "name": "listview",
+  "version": "1.0.0",
+  "description": "Animated List for React-Native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JattCoder/react-native-listView.git"
+  },
+  "author": "Harmandeep Mand",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JattCoder/react-native-listView/issues"
+  },
+  "homepage": "https://github.com/JattCoder/react-native-listView#readme"
+}
