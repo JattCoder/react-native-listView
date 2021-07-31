@@ -1,5 +1,3 @@
-# Status
-In Progress...
 #  Installation
 
 `npm i animatedListView`
@@ -7,6 +5,24 @@ In Progress...
 # Usage
 
 `import { AnimatedList } from 'animatedListView'`
+
+```
+const design = (item) => {
+    return (
+      <View style={Styles.designFrame}>
+        <TouchableOpacity style={Styles.buttonFrame}>
+          <Image style={Styles.UImage} source={{uri: item.avatar}} />
+          <View style={Styles.UserInfo}>
+            <Text style={Styles.UserName}>{`${item.first_name} ${item.last_name}`}</Text>
+            <Text style={Styles.UserEmail}>{item.email}</Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+    )
+}
+```
+
+`<AnimatedList data={data} design={design} isVisible animation animSpeed={0.9} />`
 
 # Props
 
@@ -17,16 +33,42 @@ In Progress...
             <th>Required</th>
             <th>Type</th>
             <th>Default</th>
-            <th>Return Type</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>data</td>
+            <td>Yes</td>
+            <td>Array</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td>design</td>
+            <td>Yes</td>
+            <td>Method</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td>isVisible</td>
+            <td>Yes</td>
+            <td>Boolean</td>
+            <td>False</td>
+        </tr>
+        <tr>
+            <td>animation</td>
+            <td>No</td>
+            <td>Boolean</td>
+            <td>False</td>
+        </tr>
+        <tr>
+            <td>animSpeed</td>
+            <td>No</td>
+            <td>Float</td>
+            <td>0.5</td>
         </tr>
     </tbody>
 </table>
+
+# Contribution
+
+For major changes, please open an issue first to discuss what you would like to change.
