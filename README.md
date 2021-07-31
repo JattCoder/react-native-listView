@@ -4,7 +4,7 @@
 
 # Usage
 
-`import { AnimatedList } from 'animatedListView'`
+`import { AnimatedList } from 'npm i react-native-animated-listview'`
 
 ```
 const design = (item) => {

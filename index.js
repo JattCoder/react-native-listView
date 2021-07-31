@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { FlatList, View, StyleSheet } from 'react-native';
-import ItemCell from './item';
+import ItemCell from './ItemCell';
 
 const AnimatedList = (props) => {
 
