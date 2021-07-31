@@ -1,15 +1,24 @@
 import React, { useEffect, useState } from 'react'
-import { FlatList, View, StyleSheet } from 'react-native';
-import ItemCell from './ItemCell';
+import { FlatList, View } from 'react-native';
+import ItemCell from './item';
 
 const AnimatedList = (props) => {
 
-  const { animation, animSpeed } = props;
-  const [data,setData] = useState([])
+  const { animation, animSpeed, shadow, shadowColor, shadowOpacity } = props;
+  const [data,setData] = useState([]);
 
   const renderItem = ({ item }) => {
     return (
-        <ItemCell item={item} design={props.design} isVisible={props.isVisible} anim={animation ? true : false} speed={animSpeed ? animSpeed : 0.5}/>
+      <ItemCell 
+        item={item}
+        design={props.design}
+        isVisible={props.isVisible}
+        anim={animation ? true : false}
+        speed={animSpeed ? animSpeed : 0.5}
+        shadow={shadow ? true : false}
+        shadowColor={shadowColor ? shadowColor : ''}
+        shadowOpacity={shadowOpacity ? shadowOpacity : 0.5}
+      />
     )
   }
 
@@ -29,10 +38,3 @@ const AnimatedList = (props) => {
 }
 
 export { AnimatedList }
-
-const Styles = StyleSheet.create({
-  tile: {
-    height: '15.6%',
-    width: '100%',
-  }
-});

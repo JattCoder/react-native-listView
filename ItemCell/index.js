@@ -1,6 +1,7 @@
-import React,{ useState, useEffect } from 'react';
+import React,{ useState, useEffect, useRef } from 'react';
 import {
-    Animated
+    Animated,
+    StyleSheet
 } from 'react-native';
 import {
     heightPercentageToDP as hp
@@ -8,8 +9,9 @@ import {
 
 const ItemCell = (props) => {
 
+    const { anim, speed, shadow, shadowColor, shadowOpacity } = props;
     const [cellOpacity] = useState(new Animated.Value(0));
-    const [cellMargin] = useState(new Animated.Value(1))
+    const [cellMargin] = useState(new Animated.Value(1));
 
     const animateCell = (visible) => {
         Animated.parallel([
@@ -36,10 +38,25 @@ const ItemCell = (props) => {
     })
 
     return (
-        <Animated.View style={{opacity: cellOpacity, marginTop: cellMarginInterpolate}}>
+        <Animated.View 
+            style={[styles.tile, {
+                opacity: cellOpacity,
+                marginTop: cellMarginInterpolate,
+                shadowColor: shadowColor
+            },shadow ? {shadowOpacity: shadowOpacity, elevation: shadowOpacity*10} : null]}>
             {props.design(props.item)}
         </Animated.View>
     )
 }
 
 export default ItemCell;
+
+const styles = StyleSheet.create({
+    tile:{
+        shadowOffset: {
+            width: 0,
+            height: 4,
+        },
+        shadowRadius: 5.46,
+    }
+})
