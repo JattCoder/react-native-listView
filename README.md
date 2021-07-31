@@ -22,7 +22,18 @@ const design = (item) => {
 }
 ```
 
-`<AnimatedList data={data} design={design} isVisible animation animSpeed={0.9} />`
+```
+<AnimatedList
+    data={data}
+    design={design}
+    isVisible
+    animation
+    animSpeed={0.5}
+    shadow
+    shadowColor={'red'}
+    shadowOpacity={0.4}
+/>
+```
 
 # Props
 
@@ -62,6 +73,24 @@ const design = (item) => {
         </tr>
         <tr>
             <td>animSpeed</td>
+            <td>No</td>
+            <td>Float</td>
+            <td>0.5</td>
+        </tr>
+        <tr>
+            <td>shadow</td>
+            <td>No</td>
+            <td>Boolean</td>
+            <td>False</td>
+        </tr>
+        <tr>
+            <td>shadowColor</td>
+            <td>No</td>
+            <td>String</td>
+            <td>Black</td>
+        </tr>
+        <tr>
+            <td>shadowOpacity</td>
             <td>No</td>
             <td>Float</td>
             <td>0.5</td>
