@@ -1,6 +1,6 @@
 {
   "name": "react-native-animated-listview",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Animated List for React-Native",
   "main": "index.js",
   "scripts": {

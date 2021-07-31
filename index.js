@@ -4,6 +4,7 @@ import ItemCell from './ItemCell';
 
 const AnimatedList = (props) => {
 
+  const { animation, animSpeed } = props;
   const [data,setData] = useState([])
 
   const renderItem = ({ item }) => {
